@@ -1,0 +1,38 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/check_box_1.png</file>
+        <file>image/check_box_2.png</file>
+        <file>image/downarrow.png</file>
+        <file>image/down_arrow.png</file>
+        <file>image/spinup.png</file>
+        <file>image/up_arrow.png</file>
+        <file>image/radio_1.png</file>
+        <file>image/radio_2.png</file>
+        <file>image/check_1.png</file>
+        <file>image/check_2.png</file>
+        <file>image/uparrow.png</file>
+        <file>image/fontawesome-webfont.ttf</file>
+        <file>css/aip001.css</file>
+        <file>css/aip002.css</file>
+        <file>css/aip003.css</file>
+        <file>css/aip004.css</file>
+        <file>css/aip005.css</file>
+        <file>css/aip006.css</file>
+        <file>css/aip007.css</file>
+        <file>css/aip008.css</file>
+        <file>css/aip009.css</file>
+        <file>css/aip010.css</file>
+        <file>css/aip011.css</file>
+        <file>css/aip012.css</file>
+        <file>css/aip013.css</file>
+        <file>css/aip014.css</file>
+        <file>css/aip015.css</file>
+        <file>css/aip016.css</file>
+        <file>css/aip017.css</file>
+        <file>css/aip018.css</file>
+        <file>css/aip019.css</file>
+        <file>css/aip020.css</file>
+        <file>css/aip021.css</file>
+        <file>css/aip022.css</file>
+    </qresource>
+</RCC>
