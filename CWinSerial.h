@@ -10,7 +10,12 @@
 #include <QStringList>
 #include <QDataStream>
 #include <QButtonGroup>
+
+#ifndef WINDOWS
 #include "posix_qextserialport.h"
+#else
+#include "win_qextserialport.h"
+#endif
 
 namespace Ui {
 class CWinSerial;
@@ -40,7 +45,11 @@ private slots:
     void closeEvent(QCloseEvent *e);
 
 private:
+#ifndef WINDOWS
     Posix_QextSerialPort *com;
+#else
+    Win_QextSerialPort *com;
+#endif
     QButtonGroup *btnGroup;
     QSettings *setting;
     QThread *serial;

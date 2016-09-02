@@ -26,22 +26,11 @@ CWinSerial::~CWinSerial()
 void CWinSerial::WinInit()
 {
     QStringList com;
-    QProcess *pro = new QProcess(this);
-    pro->start("dmesg");
-    pro->waitForFinished(3000);
-    QString t = pro->readAllStandardOutput();
-    QStringList tt = t.split("\n");
-    for (int i=0; i<tt.size(); i++) {
-        QString ttt = tt.at(i);
-        if (ttt.contains("ttyS")) {
-            com << ttt.mid(ttt.indexOf("ttyS"),5);
-        }
-        if (ttt.contains("ttyUSB")) {
-            com << ttt.mid(ttt.indexOf("ttyUSB"),7);
-        }
-    }
-
-//    com <<"COM1"<<"COM2"<<"COM3"<<"COM4"<<"COM5"<<"COM6"<<"COM7"<<"COM8";
+#ifndef WINDOWS
+    com <<"ttyS0"<<"ttyS1"<<"ttyUSB0"<<"ttyUSB1";
+#else
+    com <<"COM1"<<"COM2"<<"COM3"<<"COM4"<<"COM5"<<"COM6"<<"COM7"<<"COM8";
+#endif
     ui->Box1->addItems(com);
     QStringList bit;
     bit <<"2400"<<"4800"<<"9600"<<"19200"<<"38400"<<"57600"<<"115200";
