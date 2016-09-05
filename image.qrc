@@ -34,5 +34,6 @@
         <file>css/aip020.css</file>
         <file>css/aip021.css</file>
         <file>css/aip022.css</file>
+        <file>image/link.png</file>
     </qresource>
 </RCC>

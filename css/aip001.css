@@ -12,7 +12,12 @@ QWidget:focus {
 QGroupBox{
     border:1px solid #447684;
     border-radius:2px;
-    margin:15px 0px 0px 0px;
+    margin:10px 0px 0px 0px;
+}
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 3px;
 }
 /*Item Widgets*/
 /*QTableWidget,QListWidget,QTreeWidget,QHeaderView*/

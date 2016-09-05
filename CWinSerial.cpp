@@ -218,7 +218,6 @@ void CWinSerial::SendMsg(QByteArray msg)
         ui->textEdit->insertPlainText(msg.toHex());
     else
         ui->textEdit->insertPlainText(msg);
-    ui->textEdit->insertPlainText("\n");
     ui->textEdit->moveCursor(QTextCursor::End);
 }
 /******************************************************************************
