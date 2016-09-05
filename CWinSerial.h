@@ -4,18 +4,12 @@
 #include <QTimer>
 #include <QDebug>
 #include <QWidget>
-#include <QCloseEvent>
-#include <QProcess>
 #include <QSettings>
 #include <QStringList>
-#include <QDataStream>
+#include <QCloseEvent>
 #include <QButtonGroup>
-
-#ifndef WINDOWS
-#include "posix_qextserialport.h"
-#else
-#include "win_qextserialport.h"
-#endif
+#include <QtSerialPort/QSerialPort>
+#include <QtSerialPort/QSerialPortInfo>
 
 namespace Ui {
 class CWinSerial;
@@ -35,26 +29,21 @@ private:
 private slots:
     void WinInit(void);
     void KeyInit(void);
+    void KeyJudge(int id);
+    void DatInit(void);
+    void DatSave(void);
     void ComInit(void);
     void ComRead(void);
     void ComWrite(void);
-    void KeyJudge(int id);
-    void SettingSave(void);
     void SendMsg(QByteArray msg);
     void SendError(QByteArray msg);
     void closeEvent(QCloseEvent *e);
-
 private:
-#ifndef WINDOWS
-    Posix_QextSerialPort *com;
-#else
-    Win_QextSerialPort *com;
-#endif
     QButtonGroup *btnGroup;
     QSettings *setting;
-    QThread *serial;
-    QTimer *timer;
-    quint8 temp;
+    QSerialPort *com;
+    QTimer *timer1;
+    QTimer *timer2;
 };
 
 #endif // CWINSERIAL_H

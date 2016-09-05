@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui serialport
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,14 +13,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp \
-    CWinSerial.cpp \
-    qextserialbase.cpp \
-    posix_qextserialport.cpp
+    CWinSerial.cpp
 
 HEADERS  += \
-    CWinSerial.h \
-    qextserialbase.h \
-    posix_qextserialport.h
+    CWinSerial.h
 
 FORMS    += \
     CWinSerial.ui
