@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>串口调试助手by赵楠林</string>
+   <string>串口调试助手 V0.1 by 赵楠林</string>
   </property>
   <property name="windowIcon">
    <iconset resource="image.qrc">

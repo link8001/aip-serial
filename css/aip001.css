@@ -81,16 +81,16 @@ QTabBar::tab{
     background:qlineargradient(x1:0,y1:0,x2:0,y2:1,stop:0 #5B5F5F,stop:0.5 #0C2436,stop:1 #27405A);
 }
 QRadioButton::indicator::unchecked{
-    image:url(:/image/radio_2.png);
+    image:url(:/image/check_box_1.png);
 }
 QRadioButton::indicator::checked{
-    image:url(:/image/radio_1.png);
+    image:url(:/image/check_box_2.png);
 }
 QCheckBox::indicator::unchecked {
-    image:url(:/image/radio_2.png);
+    image:url(:/image/check_box_1.png);
 }
 QCheckBox::indicator::checked {
-    image:url(:/image/radio_1.png);
+    image:url(:/image/check_box_2.png);
 }
 /*Input Widgets*/
 /*QComboBox,QLineEdit,QTextEdit,QPlainTextEdit,QSpinBox,QDoubleSpinBox,QTimeEdit,QDateEdit,QScrollBar,QSlider*/

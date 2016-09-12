@@ -1,6 +1,20 @@
+/*******************************************************************************
+ * Copyright (c) 2016,青岛艾普智能仪器有限公司
+ * All rights reserved.
+ *
+ * version:     1.0
+ * author:      link
+ * date:        2016.08.18
+ * brief:       手主界面
+*******************************************************************************/
 #include "CWinSerial.h"
 #include "ui_CWinSerial.h"
-
+/******************************************************************************
+  * version:    1.0
+  * author:     link
+  * date:       2016.08.18
+  * brief:      构造函数
+******************************************************************************/
 CWinSerial::CWinSerial(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::CWinSerial)
@@ -14,7 +28,12 @@ CWinSerial::CWinSerial(QWidget *parent) :
     timer2 = new QTimer(this);
     connect(timer2,SIGNAL(timeout()),this,SLOT(ComWrite()));
 }
-
+/******************************************************************************
+  * version:    1.0
+  * author:     link
+  * date:       2016.08.18
+  * brief:      析构函数
+******************************************************************************/
 CWinSerial::~CWinSerial()
 {
     delete ui;
@@ -243,3 +262,6 @@ void CWinSerial::closeEvent(QCloseEvent *e)
     DatSave();
     e->accept();
 }
+/*******************************************************************************
+ *                                  END
+*******************************************************************************/
